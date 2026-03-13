@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tvDisclaimerContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="18dp"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:text="This application is not a medical diagnostic tool. The predictions are generated using a machine learning model and may not always be accurate. Users must consult a qualified ophthalmologist for proper diagnosis and treatment. The developers are not responsible for medical decisions taken based on this app."/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Modern Medical Palette - Refined -->
+    <color name="primary">#0F172A</color> <!-- Deep Navy -->
+    <color name="primary_light">#334155</color>
+    <color name="primary_soft">#F1F5F9</color>
+    
+    <color name="accent">#3B82F6</color> <!-- Professional Blue -->
+    <color name="accent_soft">#EFF6FF</color>
+
+    <color name="bg">#F8FAFC</color>
+    <color name="white">#FFFFFF</color>
+    <color name="line">#E2E8F0</color>
+
+    <color name="text_primary">#0F172A</color>
+    <color name="text_secondary">#475569</color>
+    <color name="text_muted">#94A3B8</color>
+
+    <!-- Severity Colors -->
+    <color name="success">#10B981</color>
+    <color name="warning">#F59E0B</color>
+    <color name="danger">#EF4444</color>
+
+    <!-- UI Elements -->
+    <color name="card_bg">#FFFFFF</color>
+    <color name="input_bg">#F1F5F9</color>
+    <color name="input_stroke">#CBD5E1</color>
+
+    <!-- Missing Colors for Built-in Drawables -->
+    <color name="bg_secondary">#F1F5F9</color>
+    <color name="accent_primary">#3B82F6</color>
+    <color name="chip_mild_bg">#E0F2FE</color>
+    <color name="chip_moderate_bg">#FEF3C7</color>
+    <color name="chip_severe_bg">#FEE2E2</color>
+    <color name="primary_dark">#0F172A</color>
+    <color name="text_dark">#0F172A</color>
+</resources>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "838779249415",
+    "project_id": "ocularsurfaceai",
+    "storage_bucket": "ocularsurfaceai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:838779249415:android:b526bab8cf3195d0431ba2",
+        "android_client_info": {
+          "package_name": "com.simats.ocularsurfaceai"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnMLjxWwflD5Bs6m1l29MM6xLbEZYBjRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

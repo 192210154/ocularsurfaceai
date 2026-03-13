@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_marginTop="16dp"
+            android:textColor="@color/text_dark"
+            android:textSize="14sp"
+            android:text="1. This application is for academic and awareness purposes only.\n\n2. The AI prediction is not a confirmed medical diagnosis.\n\n3. Users should consult a certified ophthalmologist for treatment.\n\n4. The app may store scan results (image + prediction) securely in the database for user history.\n\n5. The developer is not responsible for medical decisions taken using this app.\n\n6. By using this app, you agree to these terms."/>
+    </LinearLayout>
+</ScrollView>

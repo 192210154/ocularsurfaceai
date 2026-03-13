@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pad_screen">20dp</dimen>
+    <dimen name="radius_card">18dp</dimen>
+    <dimen name="radius_pill">28dp</dimen>
+    <dimen name="input_height">52dp</dimen>
+</resources>

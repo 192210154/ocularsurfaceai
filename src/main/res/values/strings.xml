@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ocularsurfaceai</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="manage_account_history">Manage your account &amp; history</string>
+    <string name="tip_eye_photo">Tip: Keep your eye photo well-lit for best results.</string>
+    <string name="logout">Logout</string>
+    <string name="help_support">Help &amp; Support</string>
+</resources>

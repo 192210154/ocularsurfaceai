@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.simats.ocularsurfaceai.ui.SplashFragment"
+        android:label="Splash"
+        app:defaultNavHost="true">
+        <action
+            android:id="@+id/action_splash_to_onboarding"
+            app:destination="@id/onboardingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_splash_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splash_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onboardingFragment"
+        android:name="com.simats.ocularsurfaceai.ui.OnboardingFragment">
+        <action
+            android:id="@+id/action_onboarding_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.simats.ocularsurfaceai.ui.LoginFragment">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_login_to_signup"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.simats.ocularsurfaceai.ui.SignupFragment">
+        <action
+            android:id="@+id/action_signup_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.simats.ocularsurfaceai.ui.ForgotPasswordFragment">
+        <action
+            android:id="@+id/action_forgot_to_verify"
+            app:destination="@id/verifyOtpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.simats.ocularsurfaceai.ui.VerifyOtpFragment"
+        android:label="Verify OTP">
+        <argument
+            android:name="email"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_verify_to_reset"
+            app:destination="@id/resetPasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.simats.ocularsurfaceai.ui.ResetPasswordFragment"
+        android:label="Reset Password">
+        <argument
+            android:name="resetToken"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_reset_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.simats.ocularsurfaceai.ui.HomeFragment">
+        <action
+            android:id="@+id/action_home_to_camera"
+            app:destination="@id/cameraFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_home_to_history"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_home_to_profile"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.simats.ocularsurfaceai.ui.CameraFragment">
+        <action
+            android:id="@+id/action_camera_to_review"
+            app:destination="@id/reviewImageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reviewImageFragment"
+        android:name="com.simats.ocularsurfaceai.ui.ReviewImageFragment"
+        android:label="Review">
+        <argument
+            android:name="imageUri"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_review_to_analyzing"
+            app:destination="@id/analyzingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/analyzingFragment"
+        android:name="com.simats.ocularsurfaceai.ui.AnalyzingFragment"
+        android:label="Analyzing">
+        <argument
+            android:name="imageUri"
+            app:argType="string"
+            android:defaultValue="" />
+        <action
+            android:id="@+id/action_analyzing_to_result"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.simats.ocularsurfaceai.ui.ResultFragment"
+        android:label="Analysis Result">
+        <argument
+            android:name="imageUri"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="disease"
+            app:argType="string"
+            android:defaultValue="Normal" />
+        <argument
+            android:name="confidence"
+            app:argType="string"
+            android:defaultValue="0" />
+        <argument
+            android:name="severity"
+            app:argType="string"
+            android:defaultValue="Mild" />
+        <action
+            android:id="@+id/action_resultFragment_to_diseaseDetailsFragment"
+            app:destination="@id/diseaseDetailsFragment"/>
+        <action
+            android:id="@+id/action_resultFragment_to_contactDoctorFragment"
+            app:destination="@id/contactDoctorFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.simats.ocularsurfaceai.ui.HistoryFragment"
+        android:label="History" />
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.simats.ocularsurfaceai.ui.DashboardFragment"
+        android:label="Profile">
+        <action
+            android:id="@+id/action_profile_to_settings"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_help"
+            app:destination="@id/helpSupportFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_privacy"
+            app:destination="@id/privacyPolicyFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_delete"
+            app:destination="@id/deleteAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_edit"
+            app:destination="@id/editProfileFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_change_password"
+            app:destination="@id/changePasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_library"
+            app:destination="@id/libraryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_reminders"
+            app:destination="@id/reminderFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_profile_to_specialists"
+            app:destination="@id/specialistFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.simats.ocularsurfaceai.ui.LibraryFragment"
+        android:label="Educational Hub">
+        <action
+            android:id="@+id/action_library_to_diseaseDetails"
+            app:destination="@id/diseaseDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/reminderFragment"
+        android:name="com.simats.ocularsurfaceai.ui.ReminderFragment"
+        android:label="Treatment Reminders" />
+
+    <fragment
+        android:id="@+id/specialistFragment"
+        android:name="com.simats.ocularsurfaceai.ui.SpecialistFragment"
+        android:label="Find Specialists" />
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.simats.ocularsurfaceai.ui.SettingsFragment"
+        android:label="Settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_deleteAccountFragment"
+            app:destination="@id/deleteAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.simats.ocularsurfaceai.ui.ChangePasswordFragment"
+        android:label="Change Password"/>
+
+    <fragment
+        android:id="@+id/helpSupportFragment"
+        android:name="com.simats.ocularsurfaceai.ui.HelpSupportFragment"/>
+
+    <fragment
+        android:id="@+id/privacyPolicyFragment"
+        android:name="com.simats.ocularsurfaceai.ui.PrivacyPolicyFragment"/>
+
+    <fragment
+        android:id="@+id/deleteAccountFragment"
+        android:name="com.simats.ocularsurfaceai.ui.DeleteAccountFragment"/>
+
+    <fragment
+        android:id="@+id/diseaseDetailsFragment"
+        android:name="com.simats.ocularsurfaceai.ui.DiseaseDetailsFragment"
+        android:label="Disease Details">
+        <argument
+            android:name="disease"
+            app:argType="string"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.simats.ocularsurfaceai.ui.EditProfileFragment"
+        android:label="Edit Profile"/>
+
+    <fragment
+        android:id="@+id/contactDoctorFragment"
+        android:name="com.simats.ocularsurfaceai.ui.ContactDoctorFragment"
+        android:label="Contact Doctor"/>
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.simats.ocularsurfaceai.ui.NotificationsFragment"
+        android:label="Notifications"/>
+
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.simats.ocularsurfaceai.ui.AboutFragment"
+        android:label="About" />
+
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.simats.ocularsurfaceai.ui.TermsFragment"
+        android:label="Terms" />
+
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.simats.ocularsurfaceai.ui.FaqFragment"
+        android:label="FAQ" />
+
+    <fragment
+        android:id="@+id/disclaimerFragment"
+        android:name="com.simats.ocularsurfaceai.ui.DisclaimerFragment"
+        android:label="Disclaimer" />
+
+</navigation>
